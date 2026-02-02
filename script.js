@@ -1,6 +1,33 @@
 const yes = document.getElementById("yes");
 const no = document.getElementById("no");
 const subtext = document.getElementById("subtext");
+var counter = 0;
+let messages = [
+  "are we deadahh",
+  "lol jokes over nigga",
+  "accidents happen, 2nd chance princess!",
+  "stop hurting my feelings",
+  "reservation to north"
+  "ive spent my life savings on u"
+  "im getting cheated on"
+  "IM GETTING CHEATED ON??"
+  "now ive lost my appetite and all will to live"
+  "IM GONNA RIP DIOR TO SHREDS"
+];
+
+let index = 0;
+
+function sayNo() {
+  let question = document.getElementById("question");
+
+  question.innerText = messages[index];
+
+  index++;
+
+  if (index >= messages.length) {
+    index = messages.length - 1;
+  }
+}
 
 yes.addEventListener("click", () => {
   document.body.innerHTML = `
@@ -14,12 +41,16 @@ yes.addEventListener("click", () => {
 });
 
 no.addEventListener("mouseenter", () => {
+while(counter != 6){
   const x = Math.random() * (window.innerWidth - no.offsetWidth);
   const y = Math.random() * (window.innerHeight - no.offsetHeight);
+  counter = counter + 1;
 
+  
   no.style.position = "absolute";
   no.style.left = `${x}px`;
   no.style.top = `${y}px`;
 
   subtext.textContent = "Nahhh you almost clicked it 😭";
+}
 });
