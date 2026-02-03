@@ -4,7 +4,11 @@ body {
   display: grid;
   place-items: center;
   font-family: system-ui, Arial, sans-serif;
-  background: linear-gradient(135deg, #ffd6e8, #fff3f8);
+
+  background-image: url("imagesfo/Lolapic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card {
