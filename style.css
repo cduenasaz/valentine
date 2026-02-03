@@ -37,25 +37,20 @@ button {
 #no  { background: #eee; }
 
 
-.slideshow {
-  width: min(600px, 90vw);
-  max-height: 80vh;            /* ✅ not fixed height */
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;               /* center image nicely */
-  justify-content: center;
-  align-items: center;
-
-  background: rgba(255,255,255,0.25);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+.slideshow{
+  display: inline-block;
+  max-width: 90vw;
+  max-height: 85vh;
 }
 
-.slideshow img {
-  width: 100%;
-  height: auto;                /* ✅ key fix */
-  max-height: 80vh;
-  object-fit: contain;
+.slideshow img{
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
 @keyframes confetti-fall {
