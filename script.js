@@ -73,7 +73,7 @@ yes.addEventListener("click", () => {
         </div>
 
         <audio id="bgm" src="audiofo/Forever.mp3" autoplay></audio>
-        <p style="opacity:0.7;margin-top:10px;font-size:18px;">i love u</p>
+        <p style="opacity:0.7;margin-top:10px;font-size:18px;">I love you!</p>
     
       </div>
     </main>
@@ -85,7 +85,7 @@ yes.addEventListener("click", () => {
     "imagesfo/IMG_1912.JPG",
     "imagesfo/yuh.png",
     "imagesfo/IMG_3513.JPG",
-    "imagesfo/IMG_7279"
+    "imagesfo/IMG_7279.JPG"
   ], 2000);
   
   document.body.style.background =
