@@ -65,9 +65,18 @@ yes.addEventListener("click", () => {
              style="width:250px;border-radius:20px;margin-top:20px;">
         <img src="imagesfo/yuh.png"
              style="width:250px;border-radius:20px;margin-top:20px;">
+
+        <audio id="bgm" src="audiofo/Forever.mp3" autoplay></audio>
+        <p style="opacity:0.7;margin-top:10px;font-size:14px;">bae i love u</p>
       </div>
     </main>
   `;
+
+  const audio = document.getElementById("bgm");
+  audio.volume = 0.35;
+  audio.play().catch(() => {
+  
+  });
 });
 
 no.addEventListener("mouseenter", () => {
