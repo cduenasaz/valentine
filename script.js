@@ -18,7 +18,7 @@ let messages = [
 
 let index = 0;
 
-no.addEventListener("click", () =>{
+no.addEventListener("click", () => {
   let question = document.getElementById("question");
 
   question.innerText = messages[index];
@@ -28,7 +28,7 @@ no.addEventListener("click", () =>{
   if (index >= messages.length) {
     index = messages.length - 1;
   }
-}
+});
 
 yes.addEventListener("click", () => {
   document.body.innerHTML = `
