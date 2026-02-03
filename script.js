@@ -74,6 +74,14 @@ yes.addEventListener("click", () => {
       </div>
     </main>
   `;
+  confettiBurst(180);
+  confettiRain(90, 2500);
+
+  startSlideshow([
+    "imagesfo/IMG_1912.JPG",
+    "imagesfo/yuh.png",
+  ], 2000);
+  
   document.body.style.background =
     "url('imagesfo/valentine.jpg') center/cover no-repeat";
   document.body.style.minHeight = "100vh";
@@ -103,3 +111,67 @@ if(counter >= moveLimit){
   subtext.textContent = "bro just say yes gang";
 
 });
+
+function startSlideshow(images, intervalMs = 2000) {
+  const img = document.getElementById("slide");
+  if (!img || !images || images.length === 0) return;
+
+  let i = 0;
+  img.src = images[i];
+
+  setInterval(() => {
+    i = (i + 1) % images.length;
+    img.src = images[i];
+  }, intervalMs);
+}
+
+function confettiBurst(count = 150) {
+  for (let i = 0; i < count; i++) {
+    spawnConfettiPiece({
+      x: window.innerWidth / 2,
+      spread: 0.9,
+      duration: 1200 + Math.random() * 900,
+      size: 6 + Math.random() * 8,
+    });
+  }
+}
+
+function confettiRain(count = 80, durationMs = 2000) {
+  const start = Date.now();
+  const timer = setInterval(() => {
+    for (let i = 0; i < count / 10; i++) {
+      spawnConfettiPiece({
+        x: Math.random() * window.innerWidth,
+        spread: 0.2,
+        duration: 2200 + Math.random() * 1400,
+        size: 6 + Math.random() * 8,
+      });
+    }
+    if (Date.now() - start > durationMs) clearInterval(timer);
+  }, 120);
+}
+
+function spawnConfettiPiece({ x, spread, duration, size }) {
+  const conf = document.createElement("div");
+  conf.className = "confetti";
+
+  // random pastel-ish colors without hardcoding a theme
+  const colors = ["#ff4d88", "#ffd166", "#06d6a0", "#4dabf7", "#b197fc", "#ff9f1c"];
+  conf.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+  conf.style.width = `${size}px`;
+  conf.style.height = `${size * 1.3}px`;
+
+  const startX = x + (Math.random() - 0.5) * window.innerWidth * spread;
+  conf.style.left = `${Math.max(0, Math.min(window.innerWidth - 10, startX))}px`;
+
+  conf.style.animationDuration = `${duration}ms`;
+
+  // little random delay so it looks more organic
+  conf.style.animationDelay = `${Math.random() * 120}ms`;
+
+  document.body.appendChild(conf);
+
+  // cleanup
+  setTimeout(() => conf.remove(), duration + 500);
+}
