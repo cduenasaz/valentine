@@ -6,10 +6,6 @@ body {
   font-family: system-ui, Arial, sans-serif;
 
   background-image: url("imagesfo/Lolapic.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: black;
 }
 
 .card {
