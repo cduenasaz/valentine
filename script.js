@@ -124,8 +124,6 @@ yes.addEventListener("click", () => {
   }, 7000);
 });
 
-  
-});
 
 no.addEventListener("mouseenter", () => {
 if(counter >= moveLimit){
