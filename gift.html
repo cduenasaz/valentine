@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift 💝</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gift-page">
+  <main class="gift-wrap">
+    <h1 class="gift-title">Open me! 💌</h1>
+
+    <button id="envelope" class="envelope" aria-label="Open envelope">
+      <div class="env-body"></div>
+      <div class="env-flap"></div>
+      <div class="env-heart">💗</div>
+    </button>
+
+    <section id="giftContent" class="gift-content hidden">
+      <img class="gift-photo" src="imagesfo/valentine.jpg" alt="Gift photo" />
+      <div class="gift-note">
+        <h2>For you:</h2>
+        <p>
+          <!-- Write your message here -->
+          You make my days better. Happy Valentine’s Day 💖
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const envelope = document.getElementById("envelope");
+    const giftContent = document.getElementById("giftContent");
+
+    envelope.addEventListener("click", () => {
+      envelope.classList.add("open");
+
+      // after the open animation, hide envelope + show content
+      setTimeout(() => {
+        envelope.classList.add("gone");
+        giftContent.classList.remove("hidden");
+        giftContent.classList.add("show");
+      }, 700);
+    });
+  </script>
+</body>
+</html>
