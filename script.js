@@ -55,6 +55,10 @@ no.addEventListener("click", () => {
     yes.style.fontSize = yesSize + "px";
     yes.style.padding = (yesSize/2) + "px " + (yesSize) + "px";
   }
+if(yesSize > 60){ // when it gets big
+    startFollowing();
+  }
+  
 });
 
 yes.addEventListener("click", () => {
@@ -174,4 +178,42 @@ function spawnConfettiPiece({ x, spread, duration, size }) {
 
   // cleanup
   setTimeout(() => conf.remove(), duration + 500);
+}
+
+
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let yesX = 0;
+let yesY = 0;
+
+// Track mouse
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+// Make Yes float toward cursor
+function followMouse() {
+  const rect = yes.getBoundingClientRect();
+
+  // target = mouse minus half button size (center it)
+  const targetX = mouseX - rect.width / 2;
+  const targetY = mouseY - rect.height / 2;
+
+  // smooth follow (lower = slower)
+  yesX += (targetX - yesX) * 0.08;
+  yesY += (targetY - yesY) * 0.08;
+
+  yes.style.position = "fixed";
+  yes.style.left = yesX + "px";
+  yes.style.top = yesY + "px";
+
+  requestAnimationFrame(followMouse);
+}
+
+// Start following AFTER it grows big
+function startFollowing() {
+  followMouse();
 }
