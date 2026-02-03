@@ -65,6 +65,8 @@ yes.addEventListener("click", () => {
   document.body.innerHTML = `
     <main style="height:100vh;display:grid;place-items:center;font-family:system-ui;text-align:center;">
       <div>
+        <a class="gift-btn" href="gift.html">Gift 🎁</a>
+        
         <h1>peer pressure strikes again</h1>
         <p>ok bet were valentines now</p>
 
@@ -95,8 +97,34 @@ yes.addEventListener("click", () => {
   const audio = document.getElementById("bgm");
   audio.volume = 0.35;
   audio.play().catch(() => {
-  
+
+
+
   });
+
+ const secondSongSrc = "audiofo/Declan McKenna - Slipping Through My Fingers (Official Audio).mp3";
+
+  setTimeout(() => {
+    // fade out
+    const fadeOut = setInterval(() => {
+      if (audio.volume > 0.06) {
+        audio.volume -= 0.06;
+      } else {
+        clearInterval(fadeOut);
+
+        audio.pause();
+        audio.src = secondSongSrc;
+        audio.currentTime = 0;
+
+        // reset volume then play
+        audio.volume = 0.35;
+        audio.play().catch(() => {});
+      }
+    }, 150);
+  }, 7000);
+});
+
+  
 });
 
 no.addEventListener("mouseenter", () => {
