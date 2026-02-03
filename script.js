@@ -68,6 +68,15 @@ yes.addEventListener("click", () => {
 
         <audio id="bgm" src="audiofo/Forever.mp3" autoplay></audio>
         <p style="opacity:0.7;margin-top:10px;font-size:14px;">bae i love u</p>
+    <main style="
+      min-height:100vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background-image:url('imagesfo/valentine.jpg');
+      background-size:cover;
+      background-position:center;
+    ">
       </div>
     </main>
   `;
