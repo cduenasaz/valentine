@@ -83,12 +83,14 @@ yes.addEventListener("click", () => {
   confettiBurst(180);
   confettiRain(90, 2500);
 
+  setTimeout(() => {
   startSlideshow([
     "imagesfo/IMG_1912.JPG",
     "imagesfo/yuh.png",
     "imagesfo/IMG_3513.JPG",
     "imagesfo/IMG_7279.JPG"
   ], 2000);
+}, 14000);
   
   document.body.style.background =
     "url('imagesfo/valentine.jpg') center/cover no-repeat";
