@@ -55,7 +55,7 @@ no.addEventListener("click", () => {
     yes.style.fontSize = yesSize + "px";
     yes.style.padding = (yesSize/2) + "px " + (yesSize) + "px";
   }
-if(yesSize > 60){ // when it gets big
+if(yesSize > 120){ // when it gets big
     startFollowing();
   }
   
