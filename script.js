@@ -17,7 +17,10 @@ let messages = [
   "IM GETTING CHEATED ON??",
   "now ive lost my appetite and all will to live",
   "IM GONNA RIP DIOR TO SHREDS",
-  "at some point you gotta say yes",
+  "vro im crine",
+  "vro",
+  "is this on yonks?",
+  "da fah?",
   "do u know how long this took to make",
   "please",
   "yo this cant be lola",
@@ -46,7 +49,7 @@ no.addEventListener("click", () => {
   }
   
   if(counter2 >= sizeLimit){
-    yesSize += 8; // how much it grows each time
+    yesSize += 4; // how much it grows each time
     yes.style.fontSize = yesSize + "px";
     yes.style.padding = (yesSize/2) + "px " + (yesSize) + "px";
   }
