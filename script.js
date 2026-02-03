@@ -89,6 +89,44 @@ yes.addEventListener("click", () => {
     "imagesfo/yuh.png",
     "imagesfo/IMG_3513.JPG",
     "imagesfo/IMG_7279.JPG"
+    "imagesfo/IMG_0270.jpg",
+    "imagesfo/IMG_0503.jpg",
+    "imagesfo/IMG_0610.jpg",
+    "imagesfo/IMG_1551.jpg",
+    "imagesfo/IMG_1553.jpg",
+    "imagesfo/IMG_2173.jpg",
+    "imagesfo/IMG_2687.jpg",
+    "imagesfo/IMG_2882.jpg",
+    "imagesfo/IMG_3513.JPG",
+    "imagesfo/IMG_3513.jpg",
+    "imagesfo/IMG_4277.jpg",
+    "imagesfo/IMG_4565.jpg",
+    "imagesfo/IMG_5076.jpg",
+    "imagesfo/IMG_5391.jpg",
+    "imagesfo/IMG_5713.jpg",
+    "imagesfo/IMG_6010.jpg",
+    "imagesfo/IMG_6221.jpg",
+    "imagesfo/IMG_6347.jpg",
+    "imagesfo/IMG_6486.jpg",
+    "imagesfo/IMG_6580.jpg",
+    "imagesfo/IMG_6623.jpg",
+    "imagesfo/IMG_6845.jpg",
+    "imagesfo/IMG_6919.jpg",
+    "imagesfo/IMG_6993.jpg",
+    "imagesfo/IMG_7137.jpg",
+    "imagesfo/IMG_7154.jpg",
+    "imagesfo/IMG_7239.jpg",
+    "imagesfo/IMG_7279.jpg",
+    "imagesfo/IMG_7506.jpg",
+    "imagesfo/IMG_7737.jpg",
+    "imagesfo/IMG_7880.jpg",
+    "imagesfo/IMG_7920.jpg",
+    "imagesfo/IMG_8064.jpg",
+    "imagesfo/IMG_8401.jpg",
+    "imagesfo/IMG_8738.jpg",
+    "imagesfo/IMG_8947.jpg",
+    "imagesfo/IMG_9084.jpg",
+    "imagesfo/IMG_9203.jpg"
   ], 2000);
 }, 10000);
   
@@ -145,7 +183,7 @@ if(counter >= moveLimit){
 
 });
 
-function startSlideshow(images, intervalMs = 2000) {
+function startSlideshow(images, intervalMs = 4000) {
   const img = document.getElementById("slide");
   if (!img || !images || images.length === 0) return;
 
