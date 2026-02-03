@@ -51,7 +51,7 @@ no.addEventListener("click", () => {
   }
   
   if(counter2 >= sizeLimit){
-    yesSize += 6; // how much it grows each time
+    yesSize += 6; 
     yes.style.fontSize = yesSize + "px";
     yes.style.padding = (yesSize/2) + "px " + (yesSize) + "px";
   }
@@ -63,10 +63,10 @@ yes.addEventListener("click", () => {
       <div>
         <h1>peer pressure strikes again</h1>
         <p>ok bet were valentines now</p>
-        <img src="imagesfo/IMG_1912.JPG"
-             style="width:250px;border-radius:20px;margin-top:20px;">
-        <img src="imagesfo/yuh.png"
-             style="width:250px;border-radius:20px;margin-top:20px;">
+
+        <div class="slideshow">
+          <img id="slide" src="" alt="slideshow" />
+        </div>
 
         <audio id="bgm" src="audiofo/Forever.mp3" autoplay></audio>
         <p style="opacity:0.7;margin-top:10px;font-size:18px;">i love u</p>
