@@ -80,7 +80,10 @@ yes.addEventListener("click", () => {
       </div>
     </main>
   `;
-
+  document.body.style.background =
+    "url('imagesfo/valentine.jpg') center/cover no-repeat";
+  document.body.style.minHeight = "100vh";
+  
   const audio = document.getElementById("bgm");
   audio.volume = 0.35;
   audio.play().catch(() => {
