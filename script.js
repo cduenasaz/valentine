@@ -49,7 +49,7 @@ no.addEventListener("click", () => {
   }
   
   if(counter2 >= sizeLimit){
-    yesSize += 4; // how much it grows each time
+    yesSize += 6; // how much it grows each time
     yes.style.fontSize = yesSize + "px";
     yes.style.padding = (yesSize/2) + "px " + (yesSize) + "px";
   }
