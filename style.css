@@ -53,6 +53,17 @@ button {
   box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
+.confetti{
+  position: fixed;
+  top: -10px;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0.95;
+
+  animation: confetti-fall linear forwards;
+}
+
 @keyframes confetti-fall {
   to {
     transform: translateY(110vh) rotate(720deg);
