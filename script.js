@@ -61,6 +61,10 @@ yes.addEventListener("click", () => {
       <div>
         <h1>peer pressure strikes again</h1>
         <p>ok bet were valentines now</p>
+        <img src="images/imagesfo/IMG_1912.jpg"
+             style="width:250px;border-radius:20px;margin-top:20px;">
+        <img src="images/imagesfo/yuh.png"
+             style="width:250px;border-radius:20px;margin-top:20px;">
       </div>
     </main>
   `;
