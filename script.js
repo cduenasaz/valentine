@@ -84,6 +84,8 @@ yes.addEventListener("click", () => {
   startSlideshow([
     "imagesfo/IMG_1912.JPG",
     "imagesfo/yuh.png",
+    "imagesfo/IMG_3513.JPG",
+    "imagesfo/IMG_7279"
   ], 2000);
   
   document.body.style.background =
@@ -203,8 +205,8 @@ function followMouse() {
   const targetY = mouseY - rect.height / 2;
 
   // smooth follow (lower = slower)
-  yesX += (targetX - yesX) * 0.08;
-  yesY += (targetY - yesY) * 0.08;
+  yesX += (targetX - yesX) * 0.04;
+  yesY += (targetY - yesY) * 0.04;
 
   yes.style.position = "fixed";
   yes.style.left = yesX + "px";
