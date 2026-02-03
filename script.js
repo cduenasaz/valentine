@@ -34,8 +34,8 @@ yes.addEventListener("click", () => {
   document.body.innerHTML = `
     <main style="height:100vh;display:grid;place-items:center;font-family:system-ui;text-align:center;">
       <div>
-        <h1>WOOOOO LETS GO 💖</h1>
-        <p>Best decision you’ve made all year 😌</p>
+        <h1>peer pressure strikes again</h1>
+        <p>ok bet were valentines now</p>
       </div>
     </main>
   `;
@@ -43,16 +43,19 @@ yes.addEventListener("click", () => {
 
 no.addEventListener("mouseenter", () => {
 if(counter >= moveLimit){
+  subtext.textContent = "i did something else to see if youll say yes";
+  return;
+}
   const x = Math.random() * (window.innerWidth - no.offsetWidth);
   const y = Math.random() * (window.innerHeight - no.offsetHeight);
   counter++;
-  return;
+  
 
   
   no.style.position = "absolute";
   no.style.left = `${x}px`;
   no.style.top = `${y}px`;
 
-  subtext.textContent = "Nahhh you almost clicked it 😭";
-}
+  subtext.textContent = "bro just say yes gang";
+
 });
