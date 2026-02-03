@@ -65,7 +65,7 @@ yes.addEventListener("click", () => {
   document.body.innerHTML = `
     <main style="height:100vh;display:grid;place-items:center;font-family:system-ui;text-align:center;">
       <div>
-        <a class="gift-btn" href="gift.html">Gift 🎁</a>
+        <a class="gift-btn" href="gift.html">Gift🎁</a>
         
         <h1>peer pressure strikes again</h1>
         <p>ok bet were valentines now</p>
@@ -105,7 +105,6 @@ yes.addEventListener("click", () => {
  const secondSongSrc = "audiofo/Declan McKenna - Slipping Through My Fingers (Official Audio).mp3";
 
   setTimeout(() => {
-    // fade out
     const fadeOut = setInterval(() => {
       if (audio.volume > 0.06) {
         audio.volume -= 0.06;
