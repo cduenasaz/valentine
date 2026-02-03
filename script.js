@@ -90,7 +90,7 @@ yes.addEventListener("click", () => {
     "imagesfo/IMG_3513.JPG",
     "imagesfo/IMG_7279.JPG"
   ], 2000);
-}, 14000);
+}, 10000);
   
   document.body.style.background =
     "url('imagesfo/valentine.jpg') center/cover no-repeat";
