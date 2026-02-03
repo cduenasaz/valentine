@@ -39,22 +39,23 @@ button {
 
 .slideshow {
   width: min(600px, 90vw);
-  height: min(600px, 80vh);
+  max-height: 80vh;            /* ✅ not fixed height */
   border-radius: 20px;
   overflow: hidden;
-  display: grid;
-  place-items: center;
+  display: flex;               /* center image nicely */
+  justify-content: center;
+  align-items: center;
 
-  /* shows a nice background behind “letterbox” space */
   background: rgba(255,255,255,0.25);
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .slideshow img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;  
-  display: block;       
+  height: auto;                /* ✅ key fix */
+  max-height: 80vh;
+  object-fit: contain;
+  display: block;
 }
 
 @keyframes confetti-fall {
