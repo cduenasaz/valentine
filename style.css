@@ -76,3 +76,164 @@ button {
 
 
 
+.gift-btn{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 9999;
+  background: #ff4d88;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  transform: translateY(0);
+  transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gift-btn:hover{
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.22);
+}
+
+.gift-btn:active{
+  transform: translateY(0) scale(0.98);
+}
+
+/* ---------- Gift page layout ---------- */
+body.gift-page{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: system-ui, Arial, sans-serif;
+  background:
+    linear-gradient(rgba(255,105,180,0.25), rgba(255,105,180,0.25)),
+    url("imagesfo/Lolapic.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gift-wrap{
+  text-align: center;
+  padding: 24px;
+}
+
+.gift-title{
+  margin: 0 0 18px;
+  font-size: 42px;
+  color: #fff;
+  text-shadow: 0 10px 24px rgba(0,0,0,0.28);
+}
+
+/* ---------- Envelope (button) ---------- */
+.envelope{
+  width: 240px;
+  height: 170px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  padding: 0;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,0.25));
+  animation: wiggle 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes wiggle{
+  0%, 100% { transform: rotate(-1deg) translateY(0); }
+  50%      { transform: rotate(1deg) translateY(-3px); }
+}
+
+.env-body{
+  position: absolute;
+  inset: 0;
+  background: white;
+  border-radius: 18px;
+}
+
+.env-flap{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60%;
+  background: #ffd6e8;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.env-heart{
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  font-size: 28px;
+}
+
+/* open animation */
+.envelope.open{
+  animation: none;
+}
+
+.envelope.open .env-flap{
+  animation: flapOpen 0.65s ease forwards;
+}
+
+@keyframes flapOpen{
+  from { transform: rotateX(0deg); }
+  to   { transform: rotateX(180deg); }
+}
+
+/* hide envelope after opening */
+.envelope.gone{
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+/* ---------- Reveal content ---------- */
+.gift-content{
+  margin-top: 22px;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+.gift-content.hidden{
+  display: none;
+}
+
+.gift-content.show{
+  display: grid;
+  animation: popIn 0.35s ease;
+}
+
+@keyframes popIn{
+  from { transform: translateY(10px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.gift-photo{
+  width: min(520px, 90vw);
+  border-radius: 22px;
+  box-shadow: 0 16px 34px rgba(0,0,0,0.22);
+}
+
+.gift-note{
+  width: min(520px, 90vw);
+  background: rgba(255,255,255,0.88);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+
+
