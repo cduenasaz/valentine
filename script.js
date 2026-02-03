@@ -2,16 +2,17 @@ const yes = document.getElementById("yes");
 const no = document.getElementById("no");
 const subtext = document.getElementById("subtext");
 var counter = 0;
+var moveLimit = 6;
 let messages = [
   "are we deadahh",
   "lol jokes over nigga",
   "accidents happen, 2nd chance princess!",
   "stop hurting my feelings",
-  "reservation to north"
-  "ive spent my life savings on u"
-  "im getting cheated on"
-  "IM GETTING CHEATED ON??"
-  "now ive lost my appetite and all will to live"
+  "reservation to north",
+  "ive spent my life savings on u",
+  "im getting cheated on",
+  "IM GETTING CHEATED ON??",
+  "now ive lost my appetite and all will to live",
   "IM GONNA RIP DIOR TO SHREDS"
 ];
 
@@ -41,10 +42,11 @@ yes.addEventListener("click", () => {
 });
 
 no.addEventListener("mouseenter", () => {
-while(counter != 6){
+if(counter >= moveLimit){
   const x = Math.random() * (window.innerWidth - no.offsetWidth);
   const y = Math.random() * (window.innerHeight - no.offsetHeight);
-  counter = counter + 1;
+  counter++;
+  return;
 
   
   no.style.position = "absolute";
