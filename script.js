@@ -18,7 +18,7 @@ let messages = [
 
 let index = 0;
 
-function sayNo() {
+no.addEventListener("click", () =>{
   let question = document.getElementById("question");
 
   question.innerText = messages[index];
