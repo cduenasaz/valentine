@@ -4,13 +4,7 @@ body {
   display: grid;
   place-items: center;
   font-family: system-ui, Arial, sans-serif;
-  background-image: url("imagesfo/Lolapic.jpg")
-
-  
-  background:
-    linear-gradient(rgba(255,105,180,0.3), rgba(255,105,180,0.3)),
-    url("imagesfo/valentine.jpg");
-  background-size: cover;
+  background-image: url("imagesfo/Lolapic.jpg");
 
   
 }
