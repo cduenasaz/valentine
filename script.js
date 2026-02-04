@@ -34,7 +34,7 @@ let messages = [
   "im gonna tell ur lil brother",
   "food??",
   "were dating tho",
-  "ok u win"
+  "ok fine, you can hit no..."
   
   
 ];
