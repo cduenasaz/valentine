@@ -128,7 +128,20 @@ yes.addEventListener("click", () => {
     "imagesfo/IMG_8738.jpg",
     "imagesfo/IMG_8947.jpg",
     "imagesfo/IMG_9084.jpg",
-    "imagesfo/IMG_9203.jpg"
+    "imagesfo/IMG_9203.jpg",
+    "imagesfo/IMG_6860.jpg",
+    "imagesfo/IMG_7515.jpg",
+    "imagesfo/IMG_7774.jpg",
+    "imagesfo/IMG_7905.jpg",
+    "imagesfo/IMG_7978.jpg",
+    "imagesfo/IMG_7992.jpg",
+    "imagesfo/IMG_8104.jpg",
+    "imagesfo/IMG_9671.jpg",
+    "imagesfo/IMG_0929.jpg",
+    "imagesfo/IMG_1196.jpg",
+    "imagesfo/IMG_2307.jpg",
+    "imagesfo/IMG_6685.jpg",
+    "imagesfo/IMG_6690.jpg"
   ], 2000);
 }, 10000);
   
