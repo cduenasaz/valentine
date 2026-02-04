@@ -32,7 +32,9 @@ let messages = [
   "ill buy u dutch",
   "im gonna tell twin now",
   "im gonna tell ur lil brother",
-  "food??"
+  "food??",
+  "were dating tho",
+  "ok u win"
   
   
 ];
@@ -88,7 +90,7 @@ yes.addEventListener("click", () => {
     "imagesfo/IMG_1912.JPG",
     "imagesfo/yuh.png",
     "imagesfo/IMG_3513.JPG",
-    "imagesfo/IMG_7279.JPG"
+    "imagesfo/IMG_7279.JPG",
     "imagesfo/IMG_0270.jpg",
     "imagesfo/IMG_0503.jpg",
     "imagesfo/IMG_0610.jpg",
